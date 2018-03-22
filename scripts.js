@@ -34,7 +34,7 @@ $('document').ready(function() {
             buttons.on('click', '.fa-plus', function() {
 
                 var cardHeader = prompt('New card name');
-
+                
                 var card = $('<div class="card"></div>');
                 card.draggable();
                 card.droppable({
@@ -47,19 +47,29 @@ $('document').ready(function() {
 
                 	}
                 });
+                
+                card.append('<div class="cardHeader">' + cardHeader + '</div>');
 
-                card.append('<div class="cardHeader">' + cardHeader + '</div>')
+                // var cardDescription = prompt('New card description');
+                // cardDescription.append('<div class = "cardDescription">' + cardDescription + '</div>');
+                // card.append(cardDescription);
+                                
+               
                var cardButtons =  $('<div class="buttons"><i class="fas fa-trash-alt icons"></i><i class="fas fa-pencil-alt icons"></i></div>');
                card.append(cardButtons);
+               
                newSwimlane.append(card);
 
                 cardButtons.on('click', '.fa-trash-alt', function() {
                     $(this).closest('.card').remove();
 
                 });
+                
                 buttons.on('click', '.fa-pencil-alt', function() {
-                    var newName = prompt('New card name').value;
-                    $('this').closest(".cardHeader").remove();
+                    var newName = prompt('New card name');
+                    // event.target.remove();
+                    var x = $(this).closest(".card").closest(".cardHeader");
+                    console.log(x);
                     $('swimlane').append(newName);
                 });
             })

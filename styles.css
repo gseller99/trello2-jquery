@@ -1,13 +1,14 @@
 body{
-    
-    
-    background-color: beige;
+ background-color: grey;
 }
 .jumbotron{
-    background-color: beige;
+    background-color: orange;
+    color: purple;
+    /*align-content: center;*/
 }
 #button1{
-    background-color: green;
+    background-color: lightgreen;
+    color: black;
 }
 #swimlanes{
     display: flex;
@@ -15,7 +16,7 @@ body{
     overflow: scroll;
 }
 .swimlane {
-    border: 1px solid black;
+    border: 2px solid blue;
     width: 200px;
     height: 100vh;
     background-color: lightblue;
@@ -31,8 +32,9 @@ body{
     min-height:200px; 
     /*margin: 10px;*/
     background-color: white;
-    border: 1px solid lightgrey;
+    border: 2px solid yellow;
     border-radius: 5px;
+    margin: 5px;
 }
 .card-white{
     background-color: white;
@@ -45,8 +47,3 @@ body{
     height:auto;
     overflow: auto;
 }
-
-
-
-
- 
